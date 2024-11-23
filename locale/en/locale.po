@@ -1,0 +1,36 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PluginTemplatePlugin 1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/your-repo/issues\n"
+"Last-Translator: Your Name <your.email@example.com>\n"
+"Language-Team: English <en@your-team.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-11-27T16:21:26+00:00\n"
+"PO-Revision-Date: 2024-11-19T16:21:26+00:00\n"
+"Language: en\n"
+
+msgid "plugins.generic.downloadsWorldMap.displayName"
+msgstr "Download map by country"
+
+msgid "plugins.generic.downloadsWorldMap.description"
+msgstr "This plugin displays an interactive map that visualizes the downloads of monographs by country."
+
+msgid "plugins.generic.downloadsWorldMap.publicationStatement"
+msgstr "Publication statement"
+
+msgid "plugins.generic.downloadsWorldMap.publicationStatement.description"
+msgstr "Add a publication statement that you would like to appear on the landing page of every publication."
+
+msgid "plugins.generic.downloadsWorldMap.mapTitle"
+msgstr "Global downloads map"
+
+msgid "plugins.generic.downloadsWorldMap.mapDescription"
+msgstr "Visualize your monograph downloads worldwide, broken down by country."
+
+msgid "plugins.generic.downloadsWorldMap.countryDownloads"
+msgstr "Downloads by country"
+
+msgid "plugins.generic.downloadsWorldMap.noData"
+msgstr "No data available to display on this map."

@@ -1,0 +1,36 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PluginTemplatePlugin 1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/your-repo/issues\n"
+"Last-Translator: Tu Nombre <tu.email@example.com>\n"
+"Language-Team: Español <es@your-team.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-11-27T16:21:26+00:00\n"
+"PO-Revision-Date: 2024-11-19T16:21:26+00:00\n"
+"Language: es\n"
+
+msgid "plugins.generic.downloadsWorldMap.displayName"
+msgstr "Mapa de descargas por país"
+
+msgid "plugins.generic.downloadsWorldMap.description"
+msgstr "Este plugin muestra un mapa interactivo que visualiza las descargas de monografías por país."
+
+msgid "plugins.generic.downloadsWorldMap.publicationStatement"
+msgstr "Declaración de publicación"
+
+msgid "plugins.generic.downloadsWorldMap.publicationStatement.description"
+msgstr "Añadir una declaración de publicación que te gustaría que apareciera en la página de inicio de cada publicación."
+
+msgid "plugins.generic.downloadsWorldMap.mapTitle"
+msgstr "Mapa de descargas Globales"
+
+msgid "plugins.generic.downloadsWorldMap.mapDescription"
+msgstr "Visualiza las descargas de tus monografías en todo el mundo, desglosadas por país."
+
+msgid "plugins.generic.downloadsWorldMap.countryDownloads"
+msgstr "Descargas por país"
+
+msgid "plugins.generic.downloadsWorldMap.noData"
+msgstr "No hay datos disponibles para mostrar en este mapa."
