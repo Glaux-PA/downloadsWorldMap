@@ -4,6 +4,7 @@ namespace APP\plugins\generic\downloadsWorldMap\controllers;
 use APP\handler\Handler;
 use APP\core\Services;
 use APP\statistics\StatisticsHelper;
+use APP\facades\Repo;
 class DownloadsWorldMapHandler extends Handler
 {
 function downloadsPerCountry($args, $request)
@@ -15,12 +16,16 @@ function downloadsPerCountry($args, $request)
         echo json_encode(["error"=>'The book parameter is required']);
         return;
     }
+
+    $publication=Repo::publication()->get($bookId);
+    $submissionId=$publication->getData("submissionId");
+
     try {
          $statsService = Services::get('geoStats');
     
         $allowedParams = [
             'contextIds' => [$request->getContext()->getId()],
-            'submissionIds' => [$bookId],
+            'submissionIds' => [$submissionId],
             'orderDirection' => StatisticsHelper::STATISTICS_ORDER_DESC,
         
         ];

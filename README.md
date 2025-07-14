@@ -22,12 +22,14 @@ Este plugin proporciona un mapa mundial interactivo que visualiza las descargas 
 3. **Integración en la plantilla:** Copia el siguiente código en la plantilla apropiada:
 
 ```html
-<section id="downloads-world-map">
+{if $downloadsWorldMapHtml}
+<section id="downloads-world-map" data-publication="{$publicationId|escape}">
   <h3 class="label">
     {translate key="plugins.generic.downloadsWorldMap.displayName"}
   </h3>
   <div class="value">{$downloadsWorldMapHtml nofilter}</div>
 </section>
+{/if}
 ```
 
 **Uso:**

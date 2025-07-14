@@ -62,8 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       const geojsonResponse = await fetch(geojsonURL);
       const geojsonData = await geojsonResponse.json();
-      const currentUrl = window.location.href.split("/");
-      const bookId = currentUrl[currentUrl.length - 1];
+      const bookId = document.getElementById("downloads-world-map").dataset.publication;
       const downloadsResponse = await fetch(
         `${window.location.origin}/index.php/coa/catalog/downloadsPerCountry/${bookId}`
       );
@@ -84,7 +83,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Estilo para los países
       function style(feature) {
-        const downloadsCount = downloads[feature.properties.ISO_A2] || 0;
+        const downloadsCount =
+          downloads[feature.properties["ISO3166-1-Alpha-2"]] || 0;
         return {
           fillColor: getColor(downloadsCount, minValue, maxValue),
           weight: 1,
@@ -96,10 +96,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Función para añadir popups
       function onEachFeature(feature, layer) {
-        const countryCode = feature.properties.ISO_A2;
+        const countryCode = feature.properties["ISO3166-1-Alpha-2"];
         const downloadsCount = downloads[countryCode] || 0;
         const popupContent = `
-                <b>Country:</b> ${feature.properties.ADMIN} <br>
+                <b>Country:</b> ${feature.properties.name} <br>
                 <b>Downloads:</b> ${
                   downloadsCount > 0 ? downloadsCount : "Sin datos"
                 }

@@ -59,13 +59,19 @@ class DownloadsWorldMapPlugin extends GenericPlugin
     }
 
 
-    // Asignar la plnatilla del plugin al manejador de plantillas
-    public function injectMapIntoMonograph($hookName, $args)
-    {
+    // Asignar la psatilla del plugin al manejador de plantillas
+    public function injectMapIntoMonograph($hookName, $args) {
         $templateManager = $args[0];
-      
-        $mapHtml = $templateManager->fetch($this->getTemplateResource('downloadsWorldMap.tpl'));
-        $templateManager->assign('downloadsWorldMapHtml', $mapHtml);
+        $template = $args[1];
+        if ($template === 'frontend/pages/book.tpl') {
+            $publication=$templateManager->getTemplateVars("publication");
+            $publicationId=$publication->getId();
+            $mapHtml = $templateManager->fetch($this->getTemplateResource('downloadsWorldMap.tpl'));
+            $templateManager->assign('downloadsWorldMapHtml', $mapHtml);
+            $templateManager->assign('publicationId', $publicationId);
+
+   
+        }
     }
 
     // Asignar manejador de plantillas 
